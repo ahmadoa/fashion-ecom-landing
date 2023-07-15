@@ -8,7 +8,7 @@ import Ceo from "./components/Ceo";
 
 function App() {
   return (
-    <div>
+    <div className="w-full">
       <Header />
       <Hero />
       <Collections />
