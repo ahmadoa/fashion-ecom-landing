@@ -11,6 +11,12 @@ export default {
         Textsecondary: "#828182",
         Textlightgray: "#ACAAAC",
       },
+      backgroundImage: {
+        "hero-bg": "url('/src/assets/herobg.jpg')",
+      },
+      boxShadow: {
+        "3xl": "1px 1px 50px 1px rgba(0,0,0,0.50) inset",
+      },
     },
   },
   plugins: [require("daisyui")],
