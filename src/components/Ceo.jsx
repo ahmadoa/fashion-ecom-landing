@@ -13,7 +13,7 @@ const Ceo = () => {
       <div className="flex flex-col justify-between p-10 md:p-14 col-span-1 bg-Darkprimary rounded-3xl text-white">
         <div className="flex flex-col gap-5">
           <ImQuotesRight className="h-10w-10 md:h-16 md:w-16 fill-Yellowsecondary" />
-          <div className="text-lg sm:text-xl md:text-[2.5rem] font-medium leading-normal md:leading-[3rem]">
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-[2.5rem] font-medium leading-normal md:leading-[3rem]">
             "Fashion is about dressing <br />
             according to what's <br />
             fashionable. Style is more <br />
