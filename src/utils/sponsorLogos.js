@@ -5,12 +5,8 @@ import Stark from "../assets/stark.png";
 import Precisio from "../assets/precisio.png";
 
 export const sponsorImages = [
-  {
-    img: Comet,
-  },
-  {
-    img: Bona,
-  },
+  { img: Comet },
+  { img: Bona },
   { img: Abnormal },
   { img: Stark },
   { img: Precisio },
