@@ -20,7 +20,9 @@ const Header = () => {
 
         <div className="justify-end md:justify-center flex items-center gap-2">
           <img src={Logo} className="h-9" />
-          <span className="text-xl font-bold">Los Zetas</span>
+          <span className="text-xl font-bold">
+            <a href="#">Los Zetas</a>
+          </span>
         </div>
         <div className="col-span-2 md:col-span-1 justify-end flex items-center gap-2 sm:gap-4">
           <div className="flex items-center gap-1">
