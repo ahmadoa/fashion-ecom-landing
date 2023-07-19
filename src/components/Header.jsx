@@ -7,13 +7,32 @@ import { FaCog } from "react-icons/fa";
 import { BsShieldExclamation } from "react-icons/bs";
 import { RiLogoutBoxRFill } from "react-icons/ri";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      type: "tween",
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 const Header = () => {
   const [open, setopen] = useState(false);
 
   return (
-    <div>
+    <motion.div variants={container} initial="hidden" animate="show">
       <Announcement text="free shipping until 30 february 2023" />
-      <div className="w-full px-5 py-1 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-0">
+      <motion.div
+        className="w-full px-5 py-1 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-0"
+        variants={item}
+      >
         <div className=" flex justify-start items-center">
           <BiMenu size={30} />
         </div>
@@ -55,17 +74,20 @@ const Header = () => {
             <ProfileDropdown />
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
 const Announcement = ({ text }) => {
   return (
     text && (
-      <div className="w-full text-sm text-center py-2 bg-Darkprimary text-white">
+      <motion.div
+        className="w-full text-sm text-center py-2 bg-Darkprimary text-white"
+        variants={item}
+      >
         {text}
-      </div>
+      </motion.div>
     )
   );
 };

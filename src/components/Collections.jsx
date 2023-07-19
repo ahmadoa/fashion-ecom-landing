@@ -5,10 +5,30 @@ import Nai from "../assets/naiii.jpeg";
 import Yoosef from "../assets/Yoosef.jpeg";
 import { motion } from "framer-motion";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+      type: "tween",
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 70 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, type: "spring" } },
+};
+
 const Collections = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex justify-center gap-3 md:gap-10 mx-3">
+      <motion.div
+        className="flex justify-center gap-3 md:gap-10 mx-3"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+      >
         <div className="text-Darkprimary text-xl md:text-8xl font-bold">
           Be Bold, <br />
           Be Confident
@@ -17,8 +37,13 @@ const Collections = () => {
           size={150}
           className="-rotate-[35deg] w-fit translate-y-2 md:translate-y-20 h-10 md:h-40"
         />
-      </div>
-      <div className="md:h-[90vh] grid grid-cols-1 md:grid-cols-4 gap-4 mx-3 my-10 relative">
+      </motion.div>
+      <motion.div
+        className="md:h-[90vh] grid grid-cols-1 md:grid-cols-4 gap-4 mx-3 my-10 relative"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+      >
         <Card
           collection="Jaket Invo"
           name="misho"
@@ -52,19 +77,20 @@ const Collections = () => {
           offers, sneak peeks of upcoming collections, and personalized fashion
           recommendations.
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
 const Card = ({ collection, name, link, image, self }) => {
   return (
-    <div
+    <motion.div
       className={`h-56 md:h-[26rem] col-span-1 rounded-2xl flex flex-col justify-between bg-cover bg-center`}
       style={{
         backgroundImage: `url(${image})`,
         alignSelf: `${self}`,
       }}
+      variants={item}
     >
       <a
         href={link}
@@ -82,7 +108,7 @@ const Card = ({ collection, name, link, image, self }) => {
         </div>
         <div className="text-2xl text-background font-medium">{collection}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

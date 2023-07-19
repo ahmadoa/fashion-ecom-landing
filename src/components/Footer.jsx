@@ -2,15 +2,33 @@ import FooterText from "../assets/footerText.png";
 import FooterBg from "../assets/footerBg.jpg";
 import Logo from "../assets/logo.svg";
 import Up from "../assets/up.png";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, x: 100 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+};
 
 const Footer = () => {
   return (
     <div className="mx-3 flex flex-col gap-5">
-      <div
+      <motion.div
         className="h-[40vh] md:h-[85vh] w-full rounded-3xl bg-slate-500 flex flex-col justify-between overflow-hidden bg-cover shadow-3xl"
         style={{
           backgroundImage: `url(${FooterBg})`,
         }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
       >
         <div className="flex-col-reverse flex sm:flex-row justify-between m-5">
           <a
@@ -27,12 +45,17 @@ const Footer = () => {
         <div className="w-full h-fit">
           <img
             src={FooterText}
-            className="scale-[1.03] translate-y-3 sm:scale-105 sm:-translate-y-5 md:translate-y-12"
+            className="scale-[1.03] -translate-y-6 sm:scale-105 sm:-translate-y-5 md:translate-y-12"
           />
         </div>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-5 md:gap-0 uppercase text-sm sm:text-base font-semibold text-Textprimary">
-        <ul className="flex flex-col gap-1">
+      </motion.div>
+      <motion.div
+        className="grid grid-cols-2 md:grid-cols-5 gap-5 md:gap-0 uppercase text-sm sm:text-base font-semibold text-Textprimary"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+      >
+        <motion.ul className="flex flex-col gap-1" variants={item}>
           <li className="text-Textlightgray">Product</li>
           <li>
             <a href="#">kids</a>
@@ -43,8 +66,8 @@ const Footer = () => {
           <li>
             <a href="#">men</a>
           </li>
-        </ul>
-        <ul className="flex flex-col gap-1">
+        </motion.ul>
+        <motion.ul className="flex flex-col gap-1" variants={item}>
           <li className="text-Textlightgray">Company</li>
           <li>
             <a href="#">about</a>
@@ -55,8 +78,8 @@ const Footer = () => {
           <li>
             <a href="#">Carier</a>
           </li>
-        </ul>
-        <ul className="flex flex-col gap-1">
+        </motion.ul>
+        <motion.ul className="flex flex-col gap-1" variants={item}>
           <li className="text-Textlightgray">Contact</li>
           <li>
             <a href="#">0619437468</a>
@@ -64,8 +87,8 @@ const Footer = () => {
           <li>
             <a href="#">@los.zetas</a>
           </li>
-        </ul>
-        <ul className="flex flex-col gap-1">
+        </motion.ul>
+        <motion.ul className="flex flex-col gap-1" variants={item}>
           <li className="text-Textlightgray">Social Media</li>
           <li>
             <a href="#">Instagram</a>
@@ -73,19 +96,25 @@ const Footer = () => {
           <li>
             <a href="#">Youtube</a>
           </li>
-        </ul>
-        <div className="col-span-1 flex justify-start md:justify-end items-center gap-3">
+        </motion.ul>
+        <motion.div
+          className="col-span-1 flex justify-start md:justify-end items-center gap-3"
+          variants={item}
+        >
           <img src={Up} className="h-14 md:h-24" />
-        </div>
-        <div className="flex flex-col gap-1 md:hidden justify-center">
+        </motion.div>
+        <motion.div
+          className="flex flex-col gap-1 md:hidden justify-center"
+          variants={item}
+        >
           <div>
             <a href="#">terms & condition</a>
           </div>
           <div>
             <a href="#">privacy policy</a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="grid grid-cols-2 md:grid-cols-3 items-center py-2 border-t border-Textlightgray">
         <div className="justify-start flex items-center gap-2">
           <img src={Logo} className="h-8" />
