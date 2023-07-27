@@ -85,7 +85,7 @@ const Collections = () => {
 const Card = ({ collection, name, link, image, self }) => {
   return (
     <motion.div
-      className={`h-56 md:h-[26rem] col-span-1 rounded-2xl flex flex-col justify-between bg-cover bg-center`}
+      className={`h-56 md:h-[26rem] col-span-1 rounded-2xl flex flex-col justify-between bg-cover bg-center relative`}
       style={{
         backgroundImage: `url(${image})`,
         alignSelf: `${self}`,
