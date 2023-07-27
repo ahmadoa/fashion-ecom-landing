@@ -38,8 +38,8 @@ const Header = () => {
         </div>
 
         <div className="justify-end md:justify-center flex items-center gap-2">
-          <img src={Logo} className="h-9" />
-          <span className="text-xl font-bold">
+          <img src={Logo} className="h-7 md:h-9" />
+          <span className="text-base md:text-xl font-bold">
             <a href="#">Los Zetas</a>
           </span>
         </div>
@@ -59,14 +59,14 @@ const Header = () => {
               />
             </motion.div>
             <BiSearch
-              size={30}
+              className="w-6 h-6 md:h-7 md:w-7"
               onClick={() => {
                 setopen((open) => !open);
               }}
             />
           </div>
           <div className="relative">
-            <BiStore size={30} />
+            <BiStore className="w-6 h-6 md:h-7 md:w-7" />
             <div className="w-2 h-2 bg-red-600 rounded-full absolute top-0 right-0"></div>
           </div>
           <div className="hidden md:flex gap-4 items-center">

@@ -38,7 +38,7 @@ const Ceo = () => {
       >
         <div className="flex flex-col gap-5">
           <ImQuotesRight className="h-10w-10 md:h-16 md:w-16 fill-Yellowsecondary" />
-          <div className="text-lg sm:text-xl md:text-2xl lg:text-[2.5rem] font-medium leading-normal md:leading-[3rem]">
+          <div className="text-base sm:text-xl md:text-2xl lg:text-[2.5rem] font-medium leading-normal md:leading-[3rem]">
             "Fashion is about dressing <br />
             according to what's <br />
             fashionable. Style is more <br />
@@ -47,8 +47,8 @@ const Ceo = () => {
         </div>
 
         <div className="flex flex-col gap-1">
-          <div className="text-lg font-medium">Panglima Bagas</div>
-          <div className="text-sm text-Textlightgray font-medium">
+          <div className="text-sm md:text-lg font-medium">Panglima Bagas</div>
+          <div className="text-xs md:text-sm text-Textlightgray font-medium">
             CEO of Los Zetas
           </div>
         </div>

@@ -34,7 +34,7 @@ const Services = () => {
         image={service_2}
       />
       <div className="col-span-1 grid grid-rows-1 grid-cols-2 md:grid-rows-2 md:grid-cols-1 gap-3">
-        <motion.div className="flex flex-col col-span-1 justify-between bg-Yellowsecondary rounded-3xl p-5">
+        <motion.div className="flex flex-col col-span-1 justify-between bg-Yellowsecondary rounded-3xl p-3 md:p-5">
           <img src={Logo} className="h-10 self-start" />
           <div className="flex flex-col gap-2" variants={item}>
             <div className="w-fit py-2 text-xs md:text-base px-4 bg-white rounded-3xl font-bold">
@@ -74,8 +74,8 @@ const Card = ({ info, link, image, self }) => {
         href={link}
         className="flex w-fit self-end rounded-bl-3xl bg-background relative"
       >
-        <div className="rounded-full p-3 border border-Darkprimary hover:border-Yellowsecondary hover:bg-Yellowsecondary transition-all duration-300 w-fit ml-3 mb-3">
-          <BsArrowUpShort size={40} className="rotate-45" />
+        <div className="rounded-full p-2 md:p-3 border border-Darkprimary hover:border-Yellowsecondary hover:bg-Yellowsecondary transition-all duration-300 w-fit ml-3 mb-3">
+          <BsArrowUpShort className="w-8 h-8 md:w-10 md:h-10 rotate-45" />
         </div>
         <div className="absolute -left-5 shadow-5xl rounded-full w-5 h-5 bg-transparent"></div>
         <div className="absolute right-0 -bottom-5 shadow-5xl rounded-full w-5 h-5 bg-transparent"></div>
@@ -84,7 +84,9 @@ const Card = ({ info, link, image, self }) => {
         className="flex flex-col gap-1 pl-5 pr-3 py-7 w-full md:w-[60%]"
         style={{ alignSelf: `${self}` }}
       >
-        <div className="text-base text-background font-normal">{info}</div>
+        <div className="text-sm md:text-base text-background font-normal">
+          {info}
+        </div>
       </div>
     </motion.div>
   );

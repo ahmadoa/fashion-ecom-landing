@@ -22,8 +22,9 @@ const item = {
 const Footer = () => {
   return (
     <div className="mx-3 flex flex-col gap-5">
+      {/* description footer section */}
       <motion.div
-        className="h-[40vh] md:h-[85vh] w-full rounded-3xl bg-slate-500 flex flex-col justify-between overflow-hidden bg-cover shadow-3xl"
+        className="h-[35vh] md:h-[85vh] w-full rounded-3xl bg-slate-500 flex flex-col justify-between overflow-hidden bg-cover shadow-3xl"
         style={{
           backgroundImage: `url(${FooterBg})`,
         }}
@@ -33,11 +34,11 @@ const Footer = () => {
         <div className="flex-col-reverse flex sm:flex-row justify-between m-5">
           <a
             href="#"
-            className="uppercase w-fit h-fit mt-5 sm:mt-0 px-6 py-3 rounded-full text-Yellowsecondary font-semibold bg-Darkprimary"
+            className="uppercase w-fit h-fit mt-5 sm:mt-0 px-5 py-2 md:px-6 md:py-3 rounded-full text-Yellowsecondary text-sm md:text-base font-semibold bg-Darkprimary"
           >
             Get started
           </a>
-          <div className="w-12/12 sm:w-3/12 text-sm text-justify text-stone-200 font-medium">
+          <div className="w-12/12 sm:w-3/12 text-xs md:text-sm text-justify text-stone-200 font-medium">
             join our community of style enthusiasts and gain access to
             execlusive offers, sneak peeks of upcoming collections.
           </div>
@@ -45,12 +46,13 @@ const Footer = () => {
         <div className="w-full h-fit">
           <img
             src={FooterText}
-            className="scale-[1.03] -translate-y-6 sm:scale-105 sm:-translate-y-5 md:translate-y-12"
+            className="scale-[1.03] translate-y-4 sm:scale-105 sm:-translate-y-5 md:translate-y-12"
           />
         </div>
       </motion.div>
+      {/*footer nav*/}
       <motion.div
-        className="grid grid-cols-2 md:grid-cols-5 gap-5 md:gap-0 uppercase text-sm sm:text-base font-semibold text-Textprimary"
+        className="grid grid-cols-2 md:grid-cols-5 gap-5 md:gap-0 uppercase text-xs sm:text-base font-semibold text-Textprimary"
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -115,14 +117,15 @@ const Footer = () => {
           </div>
         </motion.div>
       </motion.div>
+      {/* the rights reserved bottom bar */}
       <div className="grid grid-cols-2 md:grid-cols-3 items-center py-2 border-t border-Textlightgray">
         <div className="justify-start flex items-center gap-2">
-          <img src={Logo} className="h-8" />
-          <span className="text-lg font-bold">
+          <img src={Logo} className="h-6 md:h-8" />
+          <span className="text-base md:text-lg font-bold">
             <a href="#">Los Zetas</a>
           </span>
         </div>
-        <div className="text-Textsecondary flex justify-end md:justify-center uppercase font-medium text-sm">
+        <div className="text-Textsecondary flex justify-end md:justify-center uppercase font-medium text-xs md:text-sm">
           &copy;2023 reserved
         </div>
         <div className="hidden md:flex md:justify-end gap-3 text-Textprimary uppercase font-semibold text-sm">

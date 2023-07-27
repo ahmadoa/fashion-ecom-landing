@@ -20,14 +20,14 @@ const Hero = () => {
               <AiFillStar size={20} className="fill-yellow-400" />
               <span className="font-semibold text-white">4.8</span>
             </div>
-            <div className="text-white font-medium">
+            <div className="text-sm md:text-base text-white font-medium">
               Discover our exquisite collection of <br /> fashion-forward
               designs that will elevate <br /> your wardrobe to new heights.
             </div>
           </div>
           <a
             href="#"
-            className="uppercase w-fit h-fit px-6 py-3 rounded-full text-Yellowsecondary font-semibold bg-Darkprimary"
+            className="text-sm md:text-base uppercase w-fit h-fit px-5 py-2 md:px-6 md:py-3 rounded-full text-Yellowsecondary font-semibold bg-Darkprimary"
           >
             Shop now
           </a>
@@ -47,8 +47,10 @@ const Hero = () => {
           transition: { delay: 1 },
         }}
       >
-        <span className="text-sm text-Textprimary font-semibold">2023</span>
-        <span className="text-sm uppercase text-Textprimary font-semibold ">
+        <span className="text-xs md:text-sm text-Textprimary font-semibold">
+          2023
+        </span>
+        <span className="text-xs md:text-sm uppercase text-Textprimary font-semibold ">
           streetwear
         </span>
       </motion.div>

@@ -27,7 +27,7 @@ export const Promotion = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
     >
-      <div className="w-[200%] h-[5.5rem] py-1 border-t border-b border-dashed border-stone-300 overflow-hidden relative">
+      <div className="w-[200%] h-[3.5rem] md:h-[4.5rem] flex items-center py-1 border-t border-b border-dashed border-stone-300 overflow-hidden relative">
         <div className="w-[200%] flex items-center h-20 justify-around absolute left-0 gap-5 md:gap-20 animateInvert">
           {Array.from(
             {
@@ -44,7 +44,7 @@ export const Promotion = () => {
               <div className="flex justify-center items-center w-[9rem] gap-2 md:gap-5">
                 <img
                   src={DiscountIcon}
-                  className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16"
+                  className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14"
                 />
                 <div className="font-semibold text-Textprimary text-sm sm:text-base md:text-[2rem] whitespace-nowrap">
                   Discount 20%
@@ -65,18 +65,18 @@ export const Sponsors = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
     >
-      <div className="w-[200%] h-20 md:h-24 md:py-2 border-t border-b border-stone-300 overflow-hidden relative">
+      <div className="w-[200%] h-12 md:h-24 flex items-center md:py-2 border-t border-b border-stone-300 overflow-hidden relative">
         <div className="w-[200%] flex items-center h-20 justify-around absolute left-0 animate gap-8 sm:gap-5 md:gap-20 animate">
           {sponsorImages.map((i) => {
             return (
-              <div className="flex justify-center items-start w-[9rem]">
+              <div className="flex justify-center items-start w-[8rem]">
                 <img src={i.img} />
               </div>
             );
           })}
           {sponsorImages.map((i) => {
             return (
-              <div className="flex justify-center items-start w-[9rem]">
+              <div className="flex justify-center items-start w-[8rem]">
                 <img src={i.img} />
               </div>
             );

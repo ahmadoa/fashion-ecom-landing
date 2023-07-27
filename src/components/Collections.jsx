@@ -72,7 +72,7 @@ const Collections = () => {
           image={Amelia}
           self="start"
         />
-        <div className="h-fit text-Textsecondary absolute -bottom-28 md:top-0 md:left-1/2 md:-translate-x-1/2">
+        <div className="h-fit text-sm md:text-base text-Textsecondary absolute -bottom-24 md:-bottom-28 md:top-0 md:left-1/2 md:-translate-x-1/2">
           join our community of style enthusiasts and gain access to execlusive
           offers, sneak peeks of upcoming collections, and personalized fashion
           recommendations.
@@ -96,17 +96,19 @@ const Card = ({ collection, name, link, image, self }) => {
         href={link}
         className="flex w-fit self-end rounded-bl-3xl bg-background relative"
       >
-        <motion.div className="rounded-full p-3 border border-Darkprimary hover:border-Yellowsecondary hover:bg-Yellowsecondary transition-all duration-300 w-fit ml-3 mb-3">
-          <BsArrowUpShort size={40} className="rotate-45" />
+        <motion.div className="rounded-full p-2 md:p-3 border border-Darkprimary hover:border-Yellowsecondary hover:bg-Yellowsecondary transition-all duration-300 w-fit ml-3 mb-3">
+          <BsArrowUpShort className="w-8 h-8 md:w-10 md:h-10 rotate-45" />
         </motion.div>
         <div className="absolute -left-5 shadow-5xl rounded-full w-5 h-5 bg-transparent"></div>
         <div className="absolute right-0 -bottom-5 shadow-5xl rounded-full w-5 h-5 bg-transparent"></div>
       </a>
       <div className="flex flex-col gap-1 px-4 py-5">
-        <div className="font-bold py-1 px-3 bg-white rounded-2xl w-fit">
+        <div className="text-sm md:text-base font-bold py-1 px-3 bg-white rounded-2xl w-fit">
           {name}
         </div>
-        <div className="text-2xl text-background font-medium">{collection}</div>
+        <div className="text-base md:text-2xl text-background font-medium">
+          {collection}
+        </div>
       </div>
     </motion.div>
   );
